@@ -27,7 +27,7 @@ function playerOfmatchPerYear(matches){
 
         
     }
-     console.log(eachSeason);
+    //  console.log(eachSeason);
      return eachSeason;
     
 }

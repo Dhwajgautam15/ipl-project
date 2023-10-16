@@ -33,7 +33,7 @@ fs.createReadStream("./src/data/matches.csv")
       .on("data", (data) => deliveries.push(data))
       .on("end", () => {
         // console.log(deliveries);
-        
+
         // 1-Matches per year
         const totalPlayedMatchesInYear = TotalMatchesplayedPeryear(matches);
         fs.writeFileSync(
@@ -49,35 +49,33 @@ fs.createReadStream("./src/data/matches.csv")
           JSON.stringify(TotalmathchesWonPerteam, null, 2)
         );
         console.log(`problem-02:TotalmathchesWonPerteam.json File saved`);
+
+        //3-per team in the year 2016
+
+        const extraRunConcedePerTeamms = extraRunConcedePerTeam(matches, deliveries);
+        fs.writeFileSync(
+          jsonFileName3,
+          JSON.stringify(extraRunConcedePerTeamms, null, 2)
+        );
+        console.log(`problem-03:ExtraRunConcedeTeam.json File saved`);
+
+        //5-each team won the toss and also won the match
+        const wonTossAndMatchBoth = teamWonTossAndMatch(matches);
+        fs.writeFileSync(
+          jsonFileName5,
+          JSON.stringify(wonTossAndMatchBoth, null, 2)
+        );
+        console.log(`problem-05:wonTossAndMatchBoth  .json File saved`);
+
+        //6.-highest man of match in season 
+        const wonPlayerOfmatchPerYear = playerOfmatchPerYear(matches);
+        // console.log(wonPlayerOfmatchPerYear)
+        fs.writeFileSync(
+          jsonFileName6,
+          JSON.stringify(wonPlayerOfmatchPerYear, null, 2)
+        );
+        console.log(`problem-06:wonPlayerOfmatchPerYear.json File saved`);
       });
-
-    //3-per team in the year 2016
-    // console.log(deliveries);
-    
-    const extraRunConcedePerTeamms = extraRunConcedePerTeam(matches, deliveries);
-    fs.writeFileSync(
-      jsonFileName3,
-      JSON.stringify(extraRunConcedePerTeamms, null, 2)
-    );
-    console.log(`problem-03:ExtraRunConcedeTeam.json File saved`);
-
-    //5-each team won the toss and also won the match
-    const wonTossAndMatchBoth = teamWonTossAndMatch(matches);
-    fs.writeFileSync(
-      jsonFileName5,
-      JSON.stringify(wonTossAndMatchBoth, null, 2)
-    );
-    console.log(`problem-05:wonTossAndMatchBoth  .json File saved`);
-
-    //6.-highest man of match in season 
-    const wonPlayerOfmatchPerYear = playerOfmatchPerYear(matches);
-    console.log(wonPlayerOfmatchPerYear)
-    fs.writeFileSync(
-      jsonFileName6,
-      JSON.stringify(wonPlayerOfmatchPerYear,null,2)
-    );
-    console.log(`problem-06:wonPlayerOfmatchPerYear.json File saved`); 
   });
 
- 
-  
+
