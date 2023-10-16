@@ -37,4 +37,3 @@ module.exports = extraRunConcedePerTeam;
 
 
 
-//   console.log(extraRunConcedePerTeam(sampleMatches,sampleDeliveries));
