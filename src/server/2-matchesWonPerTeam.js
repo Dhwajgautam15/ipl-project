@@ -21,5 +21,3 @@ function mathchesWonPerteam(matches) {
 }
 
 module.exports = mathchesWonPerteam;
-
-
