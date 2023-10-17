@@ -1,4 +1,4 @@
-function TotalMatchesplayedPeryear(matches) {
+function totalMatchesPlayedPerYear(matches) {
   let totalMatchesInYear = {};
 
   matches.forEach((match) => {
@@ -12,4 +12,4 @@ function TotalMatchesplayedPeryear(matches) {
   return totalMatchesInYear;
 }
 
-module.exports = TotalMatchesplayedPeryear;
+module.exports = totalMatchesPlayedPerYear;

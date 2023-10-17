@@ -1,4 +1,4 @@
-const TotalMatchesplayedPeryear = require('../src/server/1-matches_per_year');
+const totalMatchesPlayedPerYear = require('../src/server/1-matches_per_year.js');
 
 
 test("played_matches_per_year",() => {
@@ -58,7 +58,7 @@ test("played_matches_per_year",() => {
 
     const expectedData = { '2008': 3, '2009': 2, '2011': 2, '2013': 1, '2014': 1, '2016': 1 };
 
-    expect(TotalMatchesplayedPeryear(sampleData)).toEqual(expectedData);
+    expect(totalMatchesPlayedPerYear(sampleData)).toEqual(expectedData);
 
 });
 
