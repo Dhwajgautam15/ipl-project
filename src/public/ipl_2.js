@@ -235,49 +235,49 @@ function printChart7(data) {
   });
 }
 function printChart8(data) {
+  let result = [];
+  let series = { name: '', data: [] };
+  series.name = data['batsman'] + ' dismissed by ' + data['bowler'];
+  series.data.push(data['count']);
+  result.push(series);
+
   Highcharts.chart('container8', {
     chart: {
       type: 'column',
     },
     title: {
-      text: 'number of times each team won the toss and match',
+      text: 'Get Highest No Player Dismissed',
     },
     xAxis: {
-      title: {
-        text: 'Teams Names ',
-      },
       categories: Object.keys(data),
+      crosshair: true,
     },
     yAxis: {
+      min: 0,
       title: {
-        text: 'No of matches abd toss',
+        text: 'No Of times',
       },
     },
-    series: [
-      {
-        name: ' ',
-        data: Object.values(data),
-      },
-    ],
+    series: result,
   });
 }
-function printChart8(data) {
+function printChart9(data) {
   Highcharts.chart('container9', {
     chart: {
       type: 'column',
     },
     title: {
-      text: 'Highest Time Player Dismissed by bowler',
+      text: 'Best Economy In Super Over',
     },
     xAxis: {
       title: {
-        text: 'Teams Names ',
+        text: 'Player Name',
       },
       categories: Object.keys(data),
     },
     yAxis: {
       title: {
-        text: 'No of matches abd toss',
+        text: 'No of matches and tosses',
       },
     },
     series: [
@@ -288,6 +288,7 @@ function printChart8(data) {
     ],
   });
 }
+
 function main() {
   let Chart1 = readJsonFile('1-totalMatchesplayedPeryear.json');
   Chart1.then((data) => {

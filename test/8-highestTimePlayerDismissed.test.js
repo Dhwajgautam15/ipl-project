@@ -7,67 +7,79 @@ test('highest_No_Player_Dismissed', () => {
       bowler: 'TS Mills',
       player_dismissed: 'DA Warner',
       batsman: 'DJ Hooda',
+      dismissal_kind: 'run out',
+      //caught,stumped,run out
     },
     {
       match_id: '201',
       bowler: 'A Choudhary',
       player_dismissed: 'S Dhawan',
       batsman: 'Mandeep Singh',
+      dismissal_kind: 'stumped',
     },
     {
       match_id: '301',
       bowler: 'SR Watson',
       player_dismissed: 'MC Henriques',
       batsman: 'CH Gayle',
+      dismissal_kind: 'run out',
     },
     {
       match_id: '401',
       bowler: 'TS Mills',
       player_dismissed: 'DA Warner',
       batsman: 'Mandeep Singh',
+      dismissal_kind: 'stumped',
     },
     {
       match_id: '501',
       bowler: 'SR Watson',
       player_dismissed: 'MC Henriques',
       batsman: 'CH Gayle',
+      dismissal_kind: 'caught',
     },
     {
       match_id: '601',
       bowler: 'A Choudhary',
       player_dismissed: 'S Dhawan',
       batsman: 'Mandeep Singh',
+      dismissal_kind: 'stumped',
     },
     {
       match_id: '701',
       bowler: 'TS Mills',
       player_dismissed: 'DA Warner',
       batsman: 'Mandeep Singh',
+      dismissal_kind: 'run out',
     },
     {
       match_id: '801',
       bowler: 'SR Watson',
       player_dismissed: 'MC Henriques',
       batsman: 'DJ Hooda',
+      dismissal_kind: 'caught',
     },
     {
       match_id: '901',
       bowler: 'A Choudhary',
       player_dismissed: 'S Dhawan',
       batsman: 'Mandeep Singh',
+      dismissal_kind: 'stumped',
     },
     {
       match_id: '1001',
       bowler: 'TS Mills',
       player_dismissed: 'DA Warner',
       batsman: 'CH Gayle',
+      dismissal_kind: 'caught',
     },
   ];
 
   const expectedResult = {
-    'TS Mills': { 'Mandeep Singh': 2 },
-    'A Choudhary': { 'Mandeep Singh': 3 },
-    'SR Watson': { 'CH Gayle': 2 },
+    batsman: 'S Dhawan',
+    bowler: 'A Choudhary',
+    count: 3,
   };
+
   expect(highestNoPlayerDismissed(sampleDelivery)).toEqual(expectedResult);
 });
