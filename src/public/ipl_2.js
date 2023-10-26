@@ -234,44 +234,40 @@ function printChart7(data) {
     ],
   });
 }
-// function printChart6(data) {
-//   let year = Object.keys(data).map((y) => Number(y));
-//   // console.log(year);
-//   Highcharts.chart('container6', {
-//     chart: {
-//       type: 'column',
-//       zoomType: 'xy',
-//     },
-//     title: {
-//       text: 'Player of matches per year',
-//     },
-//     xAxis: {
-//       title: {
-//         text: 'Players Name',
-//       },
-//       categories: Object.values(data),
-//     },
-//     yAxis: {
-//       min: 2000,
-//       title: {
-//         text: 'years',
-//       },
-//     },
-//     series: [
-//       {
-//         name: '',
-//         data: year,
-//       },
-//     ],
-//   });
-// }
+function printChart8(data) {
+  Highcharts.chart('container8', {
+    chart: {
+      type: 'column',
+    },
+    title: {
+      text: 'number of times each team won the toss and match',
+    },
+    xAxis: {
+      title: {
+        text: 'Teams Names ',
+      },
+      categories: Object.keys(data),
+    },
+    yAxis: {
+      title: {
+        text: 'No of matches abd toss',
+      },
+    },
+    series: [
+      {
+        name: ' ',
+        data: Object.values(data),
+      },
+    ],
+  });
+}
 function printChart8(data) {
   Highcharts.chart('container9', {
     chart: {
       type: 'column',
     },
     title: {
-      text: 'number of times each team won the toss and match',
+      text: 'Highest Time Player Dismissed by bowler',
     },
     xAxis: {
       title: {
@@ -332,10 +328,10 @@ function main() {
     printChart7(data);
   });
 
-  // let Chart8 = readJsonFile('8-highestTimePlayerDismissed.json');
-  // Chart8.then((data) => {
-  //   printChart8(data);
-  // });
+  let Chart8 = readJsonFile('8-highestTimePlayerDismissed.json');
+  Chart8.then((data) => {
+    printChart8(data);
+  });
 
   let Chart9 = readJsonFile('9-bestEconomyInSuperOvers.json');
   Chart9.then((data) => {
