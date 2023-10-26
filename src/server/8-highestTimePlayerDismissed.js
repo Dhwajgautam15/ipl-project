@@ -21,6 +21,7 @@ function highestNoPlayerDismissed(deliveries) {
       }
     }
   });
+
   let highestBatsmanDismisal = {};
 
   for (let bowler in batsmanDismisal) {
