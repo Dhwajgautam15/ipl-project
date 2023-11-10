@@ -16,8 +16,6 @@ function extraRunConcedePerTeam(matches, deliveries) {
     // console.log(ids2016.includes(delivery.match_id));
 
     if (ids2016.includes(delivery.match_id)) {
-      // console.log("enterd");
-
       extraRunConcedePerTeam2016[delivery.bowling_team] =
         (extraRunConcedePerTeam2016[delivery.bowling_team] || 0) +
         parseInt(delivery.extra_runs);
@@ -27,5 +25,4 @@ function extraRunConcedePerTeam(matches, deliveries) {
   // console.log(extraRunConcedePerTeam2016);
   return extraRunConcedePerTeam2016;
 }
-
 module.exports = extraRunConcedePerTeam;

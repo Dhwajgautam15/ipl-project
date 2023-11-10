@@ -18,7 +18,7 @@ function highestNoPlayerDismissed(deliveries) {
     }
   });
 
-  let highestBatsmanDismissal = {};
+  //   let highestBatsmanDismissal = {};
 
   let batsmanCount = { batsman: null, bowler: [], count: 0 };
   let maxDismissals = 0;
@@ -32,16 +32,10 @@ function highestNoPlayerDismissed(deliveries) {
         batsmanCount.batsman = batsman;
         batsmanCount.bowler = bowler;
         batsmanCount.count = maxDismissals;
-      } //else if (dismissals === maxDismissals) {
-      //    batsmanCount["bowler"].push(bowler);
-      // }
+      }
     }
-
-    //highestBatsmanDismissal[bowler] = batsmanCount;
   }
 
-  // return highestBatsmanDismissal;
-  // console.log(batsmanCount);
   return batsmanCount;
 }
 
