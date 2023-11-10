@@ -33,7 +33,7 @@ Providing a step-by-step guide for installing this project. Include commands and
 
 ```bash
 git clone https://github.com/Dhwajgautam15/ipl-project.git
-
+```
 
 **Change directory**
 
@@ -65,9 +65,25 @@ npm test
 git checkout webapp
 ```
 
+**start server**
+
 '''bash
 npm start
 ```
 
+###In Browser
+
+- Open http://localhost:8080/src/public/
 
 
+## Test Cases
+
+The project includes a suite of Jest test cases to ensure the accuracy and functionality of each function.
+
+## JSON Output
+
+The functions within this project provide JSON output that can be used to generate insightful statistics and reports regarding IPL data. The results help cricket enthusiasts, analysts, and fans gain a deeper understanding of the IPL seasons from 2008 to 2016.
+
+## Summary
+
+This IPL Data Analysis project serves as a valuable resource for extracting meaningful insights and statistics from one of the most popular cricket tournaments in the world. Whether you're interested in team performance, player achievements, or match outcomes, this project has you covered.
