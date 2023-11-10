@@ -36,22 +36,6 @@ function printChart1(data) {
   });
 }
 function printChart2(data) {
-  //  const teams={}
-  // for(let num in data){
-  //     for(let team in data[num]){
-  //         if(team==undefined || team == null || team == ""){
-  //             continue;
-  //         }
-  //        if(teams[team]){
-
-  //         teams[team].push(data[num][team])
-  //        }
-  //        else{
-  //         teams[team]=[];
-  //        }
-  //     }
-
-  // }
   const teams = Object.keys(data).reduce((result, year) => {
     Object.keys(data[year]).forEach((team) => {
       if (team && team !== undefined && team !== '') {
