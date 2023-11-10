@@ -67,11 +67,11 @@ git checkout webapp
 
 **start server**
 
-'''bash
+```bash
 npm start
 ```
 
-###In Browser
+##In Browser
 
 - Open http://localhost:8080/src/public/
 
