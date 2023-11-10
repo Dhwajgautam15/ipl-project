@@ -5,6 +5,7 @@
   "scripts": {
     "test": "jest --coverage",
     "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\""
+    
   },
   "husky": {
     "hooks": {
